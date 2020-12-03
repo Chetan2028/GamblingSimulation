@@ -43,23 +43,19 @@ namespace GamblingSimulation
             return updatedStake;
         }
 
+        //UC4And UC5
         public static void PlayingFor20Days()
         {
             int amount = 0;
             for (int i = 1; i <= 20; i++)
             {
+                int dayAmount = CalculativeGambler();
                 amount = amount + CalculativeGambler();
                 Console.WriteLine("Day" + i+ "amount : " + amount);
+                Console.WriteLine("Total Amount Difference: " + (amount-dayAmount));
             }
             Console.WriteLine("Total amount  :" + amount);
-            if (amount < 0)
-            {
-                Console.WriteLine("Loss : " + amount);
-            }
-            else
-            {
-                Console.WriteLine("Winning : " + amount);
-            }
+           
         }
        
         static void Main(string[] args)
