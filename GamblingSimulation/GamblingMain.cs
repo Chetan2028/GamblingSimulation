@@ -14,7 +14,7 @@ namespace GamblingSimulation
         public static int Bet()
         {
             Random random = new Random();
-            int randomChoice = random.Next(2);
+            int randomChoice = random.Next(0,2);
             if (randomChoice == 1)
             {
                 Console.WriteLine("Gambler won 1$ ");
@@ -51,12 +51,18 @@ namespace GamblingSimulation
         public static void PlayingFor20Days()
         {
             int amount = 0;
-            for (int i = 1; i <= 20; i++)
+            int[] arr = new int[20];
+            for (int i = 0; i < 20; i++)
             {
                 int dayAmount = CalculativeGambler();
-                amount = amount + CalculativeGambler();
+                amount = amount + dayAmount;
+                arr[i] = amount;
                 Console.WriteLine("Day" + i+ "amount : " + amount);
                 Console.WriteLine("Total Amount Difference: " + (amount-dayAmount));
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine("Day " +i + "amount is : " + arr[i]);
             }
             Console.WriteLine("Total amount  :" + amount);
             Console.WriteLine("Total wins : " + wins);
