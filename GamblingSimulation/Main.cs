@@ -2,7 +2,7 @@
 
 namespace GamblingSimulation
 {
-    class Main
+    class GamblingMain
     {
         static void Main(string[] args)
         {
