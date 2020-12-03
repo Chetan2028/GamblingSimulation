@@ -8,6 +8,8 @@ namespace GamblingSimulation
         public const int STAKE = 100;
         public const int BET = 1;
         public static int updatedStake = STAKE;
+        static int wins = 0;
+        static int loss = 0;
 
         public static int Bet()
         {
@@ -31,10 +33,12 @@ namespace GamblingSimulation
             {
                 if (Bet() == 1)
                 {
+                    wins++;
                     updatedStake += BET;
                 }
                 else
                 {
+                    loss++;
                     updatedStake -= BET;
                 }
 
@@ -55,15 +59,16 @@ namespace GamblingSimulation
                 Console.WriteLine("Total Amount Difference: " + (amount-dayAmount));
             }
             Console.WriteLine("Total amount  :" + amount);
-           
+            Console.WriteLine("Total wins : " + wins);
+            Console.WriteLine("Total loss : " + loss);
         }
        
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Gambling Simulation Problem");
             GamblingMain gambling = new GamblingMain();
-            Bet();
-            CalculativeGambler();
+            //Bet();
+            //CalculativeGambler();
             PlayingFor20Days();
         }
     }
