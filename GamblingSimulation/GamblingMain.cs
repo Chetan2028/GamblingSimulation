@@ -46,6 +46,7 @@ namespace GamblingSimulation
             GamblingMain gambling = new GamblingMain();
             Bet();
             CalculativeGambler();
+
         }
     }
 }
