@@ -9,6 +9,7 @@ namespace GamblingSimulation
             Console.WriteLine("Welcome to Gambling Simulation Problem");
             int stake = 100;
             int bet = 1;
+
         }
     }
 }
