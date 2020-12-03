@@ -8,8 +8,6 @@ namespace GamblingSimulation
         public const int STAKE = 100;
         public const int BET = 1;
         public static int updatedStake = STAKE;
-       static  int wins = 0;
-        static int loss = 0;
 
         public static int Bet()
         {
@@ -17,13 +15,10 @@ namespace GamblingSimulation
             int randomChoice = random.Next(2);
             if (randomChoice == 1)
             {
-                updatedStake += BET;
-
                 Console.WriteLine("Gambler won 1$ ");
             }
             else
             {
-                updatedStake -= BET;
                 Console.WriteLine("Gambler lost 1$");
             }
             Console.WriteLine(updatedStake);
